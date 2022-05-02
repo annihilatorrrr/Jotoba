@@ -32,7 +32,7 @@
                               <span class="inner-title">@data.gettext("Default search language")</span>
                               <div class="choices noselect" data-type="select-one" tabindex="1">
                                  <div class="choices__inner">
-                                    <select data-trigger="" name="type" data-onchange='alterLanguage_search' class="hidden">
+                                    <select data-trigger="" name="type" data-onchange='Settings.alterLanguage_search' class="hidden">
                                        <option value="0">@data.gettext("English")</option>
                                     </select>
                                     <div class="choices__list choices__list--single">
@@ -59,7 +59,7 @@
                            <span class="inner-title">@data.gettext("Page language")</span>
                            <div class="choices noselect" data-type="select-one" tabindex="1">
                               <div class="choices__inner">
-                                 <select name="type" data-onchange='alterLanguage_page' class="hidden">
+                                 <select name="type" data-onchange='Settings.alterLanguage_page' class="hidden">
                                     <option value="0">@data.gettext("English")</option>
                                  </select>
                                  <div class="choices__list choices__list--single">

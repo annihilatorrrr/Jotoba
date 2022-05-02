@@ -93,18 +93,20 @@ Settings.alterLanguage = function (key, value, reloadPage) {
     Settings.saveSettings(Settings.language);
 
     if (reloadPage) {
-        location.reload();
+		let params = new URLSearchParams(location.search)
+		params.delete("l");
+		location.href = location.origin + location.pathname + "?" + x.toString();
     }
 }
 
 // Used for the Choices-Hook on function calls
-alterLanguage_search = function (html, value) {
+Settings.alterLanguage_search = function (html, value) {
     let reloadPage = window.location.href.includes("/search");
     Settings.alterLanguage("searchLang", value, reloadPage);
 }
 
 // Used for the Choices-Hook on function calls
-alterLanguage_page = function (html, value) {
+Settings.alterLanguage_page = function (html, value) {
     Settings.alterLanguage("pageLang", value, true);
 }
 
